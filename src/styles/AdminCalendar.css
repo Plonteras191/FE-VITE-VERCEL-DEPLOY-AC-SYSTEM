@@ -1,0 +1,549 @@
+/* AdminCalendar.css */
+/* Modern and responsive styling with lightblue and white color scheme */
+
+/* Base styles and typography */
+.admin-calendar-container {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: #344054;
+  background-color: #f9fafb;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Calendar Header */
+.calendar-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+@media (min-width: 768px) {
+  .calendar-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.calendar-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.calendar-title h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #1e3a8a;
+}
+
+.calendar-icon {
+  color: #3b82f6;
+  font-size: 1.5rem;
+}
+
+/* Filters section */
+.calendar-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.filter-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-control label {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.filter-control select {
+  background-color: white;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: #374151;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236B7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1rem;
+  padding-right: 2rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.filter-control select:focus {
+  outline: none;
+  border-color: #93c5fd;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.refresh-button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.refresh-button:hover {
+  background-color: #2563eb;
+}
+
+.refresh-button:active {
+  background-color: #1d4ed8;
+}
+
+/* Calendar Legend */
+.calendar-view-legend {
+  margin-bottom: 1.5rem;
+}
+
+.calendar-legend {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+}
+
+.legend-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  color: #4b5563;
+}
+
+.legend-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.color-box {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 4px;
+}
+
+/* Calendar wrapper */
+.calendar-wrapper {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+}
+
+/* FullCalendar overrides */
+.fc .fc-toolbar.fc-header-toolbar {
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.fc .fc-button-primary {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+  font-weight: 500;
+  text-transform: capitalize;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.fc .fc-button-primary:not(:disabled):hover {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:not(:disabled):active {
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+.fc-theme-standard th {
+  border-color: #e5e7eb;
+  padding: 0.75rem;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.fc-theme-standard td {
+  border-color: #e5e7eb;
+}
+
+.fc .fc-daygrid-day-number {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #6b7280;
+  padding: 0.5rem;
+}
+
+.fc .fc-day-today {
+  background-color: #f0f9ff !important;
+}
+
+.fc-event {
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.15s ease;
+}
+
+.fc-event:hover {
+  transform: translateY(-1px) scale(1.01);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom event styles */
+.custom-event-content {
+  padding: 0.5rem;
+  overflow: hidden;
+}
+
+.event-title {
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.event-customer {
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  opacity: 0.9;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Event tooltip */
+.event-tooltip {
+  position: fixed;
+  z-index: 1000;
+  width: 280px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  pointer-events: none;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.tooltip-header {
+  padding: 0.75rem 1rem;
+  color: white;
+}
+
+.tooltip-header h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.tooltip-body {
+  padding: 1rem;
+}
+
+.tooltip-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.tooltip-detail svg {
+  margin-top: 0.2rem;
+  color: #6b7280;
+  flex-shrink: 0;
+}
+
+.tooltip-status {
+  margin: 0.75rem 0;
+}
+
+.tooltip-footer {
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+/* Status badges */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status-badge.pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.status-badge.accepted {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.status-badge.completed {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+/* Event modal */
+.event-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1010;
+  padding: 1rem;
+  animation: fadeIn 0.2s ease;
+}
+
+.event-modal-content {
+  background-color: white;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.event-modal-header {
+  padding: 1.25rem 1.5rem;
+  color: white;
+  position: relative;
+}
+
+.event-modal-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.25rem;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.close-modal:hover {
+  opacity: 1;
+}
+
+.event-modal-body {
+  padding: 1.5rem;
+}
+
+.event-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  color: #4b5563;
+}
+
+.event-detail svg {
+  color: #6b7280;
+  font-size: 1rem;
+  margin-top: 0.2rem;
+}
+
+.booking-id {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+  font-weight: 500;
+}
+
+.event-status {
+  margin-top: 1.5rem;
+}
+
+.event-modal-footer {
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #e5e7eb;
+}
+
+.action-button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.action-button:hover {
+  background-color: #2563eb;
+}
+
+/* Loading state */
+.calendar-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+}
+
+.loader {
+  border: 3px solid #e5e7eb;
+  border-radius: 50%;
+  border-top: 3px solid #3b82f6;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Technician styles */
+.event-detail.technicians {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.event-detail.technicians > span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #2d3748;
+  font-weight: 500;
+}
+
+.technician-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+  padding-left: 24px;
+}
+
+.technician-tag {
+  background-color: #e2e8f0;
+  color: #2d3748;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.85em;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tooltip-detail .technician-tag {
+  background-color: rgba(226, 232, 240, 0.9);
+  padding: 2px 8px;
+  font-size: 0.8em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .admin-calendar-container {
+    padding: 1rem;
+  }
+  
+  .fc .fc-toolbar.fc-header-toolbar {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .fc .fc-toolbar-title {
+    text-align: center;
+  }
+  
+  .fc-header-toolbar .fc-toolbar-chunk {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .event-modal-content {
+    max-width: 100%;
+    margin: 0 1rem;
+  }
+}

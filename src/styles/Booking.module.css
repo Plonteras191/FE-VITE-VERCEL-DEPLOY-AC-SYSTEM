@@ -1,0 +1,296 @@
+.container {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  background-color: #f9fafb;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-align: center;
+  color: #0369a1;
+  margin-bottom: 2rem;
+}
+
+.bookingCard {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.headerSection {
+  background-color: #f0f9ff;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e0f2fe;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.iconContainer {
+  background-color: #0369a1;
+  border-radius: 9999px;
+  padding: 0.5rem;
+}
+
+.icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  color: white;
+}
+
+.headerTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #075985;
+}
+
+.formContainer {
+  padding: 1.5rem;
+}
+
+.errorAlert {
+  background-color: #fee2e2;
+  border: 1px solid #f87171;
+  color: #b91c1c;
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.formContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0369a1;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.numberBadge {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  border-radius: 9999px;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+}
+
+.sectionDescription {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.serviceCard {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.serviceCard:hover {
+  border-color: #bae6fd;
+}
+
+.serviceCardSelected {
+  border-color: #0ea5e9;
+  background-color: #f0f9ff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.checkbox {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #0ea5e9;
+  border-radius: 0.25rem;
+}
+
+.checkbox:focus {
+  ring: 2px solid #0ea5e9;
+}
+
+.serviceLabel {
+  margin-left: 0.75rem;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.serviceDetails {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.serviceDetailCard {
+  background-color: white;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e0f2fe;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.serviceDetailTitle {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #0369a1;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f0f9ff;
+}
+
+.formGroup {
+  margin-bottom: 1.25rem;
+}
+
+.label {
+  display: block;
+  color: #374151;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.required {
+  color: #ef4444;
+  margin-left: 0.25rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+}
+
+.input:focus {
+  ring: 2px solid #0ea5e9;
+  border-color: #0ea5e9;
+}
+
+.acTypesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.acTypeCard {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.acTypeCard:hover {
+  border-color: #bae6fd;
+}
+
+.acTypeSelected {
+  border-color: #0ea5e9;
+  background-color: #f0f9ff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  resize: none;
+  height: 6rem;
+}
+
+.textarea:focus {
+  ring: 2px solid #0ea5e9;
+  border-color: #0ea5e9;
+}
+
+.submitSection {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.submitButton {
+  width: 100%;
+  background-color: #0284c7;
+  color: white;
+  font-weight: 500;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submitButton:hover {
+  background-color: #0369a1;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.submitButton:focus {
+  outline: none;
+  ring: 4px solid #bae6fd;
+}
+
+.errorText {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .formGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fullWidth {
+    grid-column: span 2;
+  }
+
+  .submitButton {
+    width: auto;
+  }
+}

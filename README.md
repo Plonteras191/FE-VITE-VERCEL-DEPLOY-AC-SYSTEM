@@ -1,12 +1,49 @@
-# React + Vite
+# Air-Conditioning Appointment System SETUP
+# Frontend (React + Vite) – Setup & Instructions
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This README describes how to set up and run the **React + Vite** frontend for the Air-Conditioning Service Appointment System.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
 
-## Expanding the ESLint configuration
+- [Prerequisites](#prerequisites)  
+- [Installing Dependencies](#installing-dependencies)    
+- [Running in Development](#running-in-development)  
+- [GITHUB REPO](#GITHUB-REPO)  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Prerequisites
+
+Before you begin, confirm that your system has the following installed:
+
+- **Node.js ≥ 16.x** and **npm ≥ 8.x** (or **Yarn ≥ 1.22**)  
+- **Git** (for cloning the repository)  
+- A running instance of the Laravel backend at `http://127.0.0.1:8000/api` (see Backend README)
+
+---
+
+## Installing Dependencies
+
+1. Open a terminal and navigate to the `ac-system/` folder of your project:
+   ```bash
+   cd ac-system
+
+2. npm install
+# Or, if you prefer Yarn:
+# yarn install
+
+## Running in Development
+
+3. Development Start
+# Make sure your Laravel backend is running at http://127.0.0.1:8000.
+# In the terminal (inside ac-system/):
+# npm run dev <= COMMON USED
+# Or, if using Yarn:
+# yarn dev
+# You should see something like this http://localhost:5173/
+
+## GITHUB REPO
+# https://github.com/Plonteras191/FE-LARAVEL-AC-SYSTEM.git
+
