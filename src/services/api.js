@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Base URL for Laravel API
-export const API_BASE_URL = 'http://localhost:8000/api';
+export const API_BASE_URL = 'https://be-laravel-ac-system-263e937ff4c5.herokuapp.com/api';
 
 // Create a pre-configured axios instance
 const apiClient = axios.create({
